@@ -53,7 +53,7 @@ This package contains documentation for %{name}.
 %install
 rm -rf %{buildroot}
 mkdir -p %{buildroot}%{gem_dir}
-cp -a .%{gem_dir}/* %{buildroot}%{gem_dir}/
+cp -pa .%{gem_dir}/* %{buildroot}%{gem_dir}/
 mkdir -p %{buildroot}%{_bindir}
 cp -pa .%{_bindir}/* %{buildroot}%{_bindir}/
 find %{buildroot}%{gem_instdir}/bin -type f | xargs chmod a+x

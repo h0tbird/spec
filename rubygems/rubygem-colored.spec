@@ -40,7 +40,7 @@ This package contains documentation for %{name}
 %install
 rm -rf %{buildroot}
 mkdir -p %{buildroot}%{gem_dir}
-cp -a .%{gem_dir}/* %{buildroot}%{gem_dir}/
+cp -pa .%{gem_dir}/* %{buildroot}%{gem_dir}/
 
 %files
 %dir %{gem_instdir}
