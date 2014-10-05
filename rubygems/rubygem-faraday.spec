@@ -43,9 +43,7 @@ cp -pa .%{gem_dir}/* %{buildroot}%{gem_dir}/
 %{gem_instdir}/lib
 %{gem_instdir}/script
 %{gem_instdir}/test
-%exclude %{gem_dir}/cache/%{gem_name}-%{version}.gem
-%{gem_dir}/specifications/%{gem_name}-%{version}.gemspec
-%exclude %{gem_instdir}/.document
+%{gem_spec}
 %{gem_instdir}/CHANGELOG.md
 %{gem_instdir}/CONTRIBUTING.md
 %{gem_instdir}/Gemfile
@@ -53,6 +51,8 @@ cp -pa .%{gem_dir}/* %{buildroot}%{gem_dir}/
 %{gem_instdir}/README.md
 %{gem_instdir}/Rakefile
 %{gem_instdir}/faraday.gemspec
+%exclude %{gem_dir}/cache/%{gem_name}-%{version}.gem
+%exclude %{gem_instdir}/.document
 
 %files doc
 %doc %{gem_dir}/doc/%{gem_name}-%{version}

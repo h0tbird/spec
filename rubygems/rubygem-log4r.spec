@@ -41,8 +41,8 @@ cp -pa .%{gem_dir}/* %{buildroot}%{gem_dir}/
 %dir %{gem_instdir}
 %{gem_instdir}/lib
 %{gem_instdir}/tests
+%{gem_spec}
 %exclude %{gem_dir}/cache/%{gem_name}-%{version}.gem
-%{gem_dir}/specifications/%{gem_name}-%{version}.gemspec
 
 %files doc
 %doc %{gem_dir}/doc/%{gem_name}-%{version}

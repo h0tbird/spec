@@ -69,8 +69,8 @@ find %{buildroot}%{gem_instdir}/bin -type f | \
 %{gem_instdir}/README.markdown
 %{gem_instdir}/Rakefile
 %{gem_libdir}
-%exclude %{gem_cache}
 %{gem_spec}
+%exclude %{gem_cache}
 %exclude %{gem_instdir}/.gitignore
 %exclude %{gem_instdir}/.nodeset.yml
 %exclude %{gem_instdir}/.rspec
@@ -80,15 +80,10 @@ find %{buildroot}%{gem_instdir}/bin -type f | \
 %{gem_instdir}/Gemfile
 %{gem_instdir}/r10k.gemspec
 %{gem_instdir}/spec/
-%exclude %{gem_instdir}/spec/fixtures/doc/components/.empty_directory
 %doc %{gem_docdir}
-%{gem_instdir}/doc/dynamic-environments.mkd
-%{gem_instdir}/doc/dynamic-environments/configuration.mkd
-%{gem_instdir}/doc/dynamic-environments/git-environments.markdown
-%{gem_instdir}/doc/dynamic-environments/introduction.mkd
-%{gem_instdir}/doc/dynamic-environments/usage.mkd
-%{gem_instdir}/doc/puppetfile.markdown
+%{gem_instdir}/doc
 %{gem_instdir}/r10k.yaml.example
+%exclude %{gem_instdir}/spec/fixtures/doc/components/.empty_directory
 
 %changelog
 * Sun Oct 5 2014 Marc Villacorta Morera <marc.villacorta@gmail.com> - 1.3.4-1

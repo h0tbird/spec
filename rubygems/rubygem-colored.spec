@@ -45,12 +45,12 @@ cp -pa .%{gem_dir}/* %{buildroot}%{gem_dir}/
 %files
 %dir %{gem_instdir}
 %{gem_instdir}/lib
-%exclude %{gem_dir}/cache/%{gem_name}-%{version}.gem
-%{gem_dir}/specifications/%{gem_name}-%{version}.gemspec
+%{gem_spec}
 %{gem_instdir}/LICENSE
 %{gem_instdir}/README
 %{gem_instdir}/Rakefile
 %{gem_instdir}/test/colored_test.rb
+%exclude %{gem_dir}/cache/%{gem_name}-%{version}.gem
 
 %files doc
 %doc %{gem_dir}/doc/%{gem_name}-%{version}
