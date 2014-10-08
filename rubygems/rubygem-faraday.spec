@@ -2,7 +2,7 @@
 
 Summary: HTTP/REST API client library
 Name: rubygem-%{gem_name}
-Version: 0.9.0
+Version: 0.8.9
 Release: 1%{?dist}
 Group: Development/Languages
 License: MIT
@@ -44,19 +44,15 @@ cp -pa .%{gem_dir}/* %{buildroot}%{gem_dir}/
 %{gem_instdir}/script
 %{gem_instdir}/test
 %{gem_spec}
-%{gem_instdir}/CHANGELOG.md
-%{gem_instdir}/CONTRIBUTING.md
 %{gem_instdir}/Gemfile
 %{gem_instdir}/LICENSE.md
 %{gem_instdir}/README.md
 %{gem_instdir}/Rakefile
-%{gem_instdir}/faraday.gemspec
 %exclude %{gem_dir}/cache/%{gem_name}-%{version}.gem
-%exclude %{gem_instdir}/.document
 
 %files doc
 %doc %{gem_dir}/doc/%{gem_name}-%{version}
 
 %changelog
-* Sun Oct 05 2014 Marc Villacorta Morera <marc.villacorta@gmail.com> - 0.9.0-1
+* Wed Oct 08 2014 Marc Villacorta Morera <marc.villacorta@gmail.com> - 0.8.9-1
 - Initial package

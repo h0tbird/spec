@@ -1,17 +1,15 @@
-%global gem_name cri
+%global gem_name json_pure
 
-Summary: A library for building easy-to-use commandline tools
+Summary: JSON Implementation for Ruby
 Name: rubygem-%{gem_name}
-Version: 2.5.0
+Version: 1.8.1
 Release: 1%{?dist}
 Group: Development/Languages
-License: MIT
-URL: http://stoneship.org/software/cri/
+License: Ruby
+URL: http://flori.github.com/json
 Source0: https://rubygems.org/gems/%{gem_name}-%{version}.gem
 Requires: ruby(release)
-Requires: ruby(rubygems) 
-Requires: rubygem(colored) => 1.2
-Requires: rubygem(colored) < 2
+Requires: ruby(rubygems)
 BuildRequires: rubygems-devel
 BuildRequires: ruby(release)
 BuildRequires: ruby(rubygems)
@@ -19,8 +17,7 @@ BuildArch: noarch
 Provides: rubygem(%{gem_name}) = %{version}
 
 %description
-Cri allows building easy-to-use commandline interfaces with support for
-subcommands.
+This is a JSON implementation in pure Ruby.
 
 %package doc
 Summary: Documentation for %{name}
@@ -33,7 +30,6 @@ This package contains documentation for %{name}
 
 %prep
 %setup -q -c -T
-mkdir -p .%{gem_dir}
 %gem_install -n %{SOURCE0}
 
 %install
@@ -44,20 +40,34 @@ cp -pa .%{gem_dir}/* %{buildroot}%{gem_dir}/
 %files
 %dir %{gem_instdir}
 %{gem_instdir}/lib
-%{gem_spec}
+%{gem_instdir}/data
+%{gem_instdir}/diagrams
+%{gem_instdir}/ext
+%{gem_instdir}/java
+%{gem_instdir}/tests
+%{gem_instdir}/tools
+%{gem_instdir}/CHANGES
+%{gem_instdir}/COPYING
+%{gem_instdir}/COPYING-json-jruby
+%{gem_instdir}/GPL
 %{gem_instdir}/Gemfile
-%{gem_instdir}/Gemfile.lock
+%{gem_instdir}/README-json-jruby.markdown
 %{gem_instdir}/Rakefile
-%{gem_instdir}/cri.gemspec
-%{gem_instdir}/test
+%{gem_instdir}/TODO
+%{gem_instdir}/VERSION
+%{gem_instdir}/install.rb
+%{gem_instdir}/json-java.gemspec
+%{gem_instdir}/json.gemspec
+%{gem_instdir}/json_pure.gemspec
+%{gem_spec}
 %exclude %{gem_dir}/cache/%{gem_name}-%{version}.gem
+%exclude %{gem_instdir}/.gitignore
+%exclude %{gem_instdir}/.travis.yml
 
 %files doc
 %doc %{gem_dir}/doc/%{gem_name}-%{version}
-%doc %{gem_instdir}/LICENSE
-%doc %{gem_instdir}/README.adoc
-%doc %{gem_instdir}/NEWS.md
+%doc %{gem_instdir}/README.rdoc
 
 %changelog
-* Wed Oct 08 2014 Marc Villacorta Morera <marc.villacorta@gmail.com> - 2.5.0-1
+* Wed Oct 08 2014 Marc Villacorta Morera <marc.villacorta@gmail.com> - 1.8.1-1
 - Initial package
