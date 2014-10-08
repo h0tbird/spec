@@ -2,7 +2,7 @@
 
 Summary: A multipart form post accessory for Net::HTTP
 Name: rubygem-%{gem_name}
-Version: 2.0.0
+Version: 1.2.0
 Release: 1%{?dist}
 Group: Development/Languages
 License: MIT
@@ -45,10 +45,11 @@ cp -pa .%{gem_dir}/* %{buildroot}%{gem_dir}/
 %{gem_instdir}/Gemfile
 %{gem_instdir}/History.txt
 %{gem_instdir}/Manifest.txt
-%{gem_instdir}/README.md
 %{gem_instdir}/Rakefile
 %{gem_instdir}/multipart-post.gemspec
 %{gem_instdir}/test
+%{gem_instdir}/Gemfile.lock
+%{gem_instdir}/README.txt
 %exclude %{gem_instdir}/.gitignore
 %exclude %{gem_instdir}/.travis.yml
 %exclude %{gem_dir}/cache/%{gem_name}-%{version}.gem
@@ -57,5 +58,5 @@ cp -pa .%{gem_dir}/* %{buildroot}%{gem_dir}/
 %doc %{gem_dir}/doc/%{gem_name}-%{version}
 
 %changelog
-* Sun Oct 05 2014 Marc Villacorta Morera <marc.villacorta@gmail.com> - 2.0.0-1
+* Wed Oct 08 2014 Marc Villacorta Morera <marc.villacorta@gmail.com> - 1.2.0-1
 - Initial package
