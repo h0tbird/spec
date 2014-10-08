@@ -2,7 +2,7 @@
 
 Summary: HTTP/REST API client library
 Name: rubygem-%{gem_name}
-Version: 0.8.9
+Version: 0.8.8
 Release: 1%{?dist}
 Group: Development/Languages
 License: MIT
@@ -10,8 +10,7 @@ URL: https://github.com/lostisland/faraday
 Source0: https://rubygems.org/gems/%{gem_name}-%{version}.gem
 Requires: ruby(release)
 Requires: ruby(rubygems) >= 1.3.5
-Requires: rubygem(multipart-post) >= 1.2
-Requires: rubygem(multipart-post) < 3
+Requires: rubygem(multipart-post) = 1.2.0
 BuildRequires: rubygems-devel
 BuildRequires: ruby(release)
 BuildRequires: ruby(rubygems) >= 1.3.5
@@ -54,5 +53,5 @@ cp -pa .%{gem_dir}/* %{buildroot}%{gem_dir}/
 %doc %{gem_dir}/doc/%{gem_name}-%{version}
 
 %changelog
-* Wed Oct 08 2014 Marc Villacorta Morera <marc.villacorta@gmail.com> - 0.8.9-1
+* Sun Oct 05 2014 Marc Villacorta Morera <marc.villacorta@gmail.com> - 0.8.8-1
 - Initial package

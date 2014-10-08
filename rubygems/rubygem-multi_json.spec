@@ -2,7 +2,7 @@
 
 Summary: A common interface to multiple JSON libraries
 Name: rubygem-%{gem_name}
-Version: 1.8.4
+Version: 1.8.2
 Release: 1%{?dist}
 Group: Development/Languages
 License: MIT
@@ -61,5 +61,5 @@ cp -pa .%{gem_dir}/* %{buildroot}%{gem_dir}/
 %doc %{gem_dir}/doc/%{gem_name}-%{version}
 
 %changelog
-* Wed Oct 08 2014 Marc Villacorta Morera <marc.villacorta@gmail.com> - 1.8.4-1
+* Wed Oct 08 2014 Marc Villacorta Morera <marc.villacorta@gmail.com> - 1.8.2-1
 - Initial package

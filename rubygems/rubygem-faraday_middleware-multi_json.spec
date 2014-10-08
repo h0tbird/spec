@@ -2,7 +2,7 @@
 
 Summary: Response JSON parser using MultiJson and FaradayMiddleware
 Name: rubygem-%{gem_name}
-Version: 0.0.6
+Version: 0.0.5
 Release: 1%{?dist}
 Group: Development/Languages
 License: Apache 2.0
@@ -57,5 +57,5 @@ cp -pa .%{gem_dir}/* %{buildroot}%{gem_dir}/
 %doc %{gem_dir}/doc/%{gem_name}-%{version}
 
 %changelog
-* Sun Oct 05 2014 Marc Villacorta Morera <marc.villacorta@gmail.com> - 0.0.6-1
+* Sun Oct 05 2014 Marc Villacorta Morera <marc.villacorta@gmail.com> - 0.0.5-1
 - Initial package
