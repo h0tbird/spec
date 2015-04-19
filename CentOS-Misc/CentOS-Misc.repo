@@ -1,0 +1,5 @@
+[misc]
+name=name=Extra Packages from CentOS Misc Repository
+baseurl=http://yum-repositories.s3-website-eu-west-1.amazonaws.com/centos/7/misc
+enabled=1
+gpgcheck=0
